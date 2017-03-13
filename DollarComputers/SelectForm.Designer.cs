@@ -55,7 +55,7 @@
             this.HardwareListDataGridView.Location = new System.Drawing.Point(12, 48);
             this.HardwareListDataGridView.Name = "HardwareListDataGridView";
             this.HardwareListDataGridView.ReadOnly = true;
-            this.HardwareListDataGridView.Size = new System.Drawing.Size(693, 301);
+            this.HardwareListDataGridView.Size = new System.Drawing.Size(760, 301);
             this.HardwareListDataGridView.TabIndex = 1;
             // 
             // label2
@@ -76,13 +76,13 @@
             this.textBox1.Location = new System.Drawing.Point(133, 369);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(330, 23);
+            this.textBox1.Size = new System.Drawing.Size(356, 23);
             this.textBox1.TabIndex = 3;
             // 
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.CancelButton.Location = new System.Drawing.Point(535, 367);
+            this.CancelButton.Location = new System.Drawing.Point(593, 367);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 26);
             this.CancelButton.TabIndex = 4;
@@ -92,7 +92,7 @@
             // NextButton
             // 
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NextButton.Location = new System.Drawing.Point(630, 367);
+            this.NextButton.Location = new System.Drawing.Point(697, 367);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 26);
             this.NextButton.TabIndex = 5;
@@ -102,7 +102,7 @@
             // SelectForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(717, 414);
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
