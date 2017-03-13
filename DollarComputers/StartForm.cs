@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace DollarComputers
 {
-    public partial class Form1 : Form
+    public partial class StartForm : Form
     {
-        public Form1()
+        // create a reference to the previous form
+        public Form previousForm;
+
+        public StartForm()
         {
             InitializeComponent();
         }

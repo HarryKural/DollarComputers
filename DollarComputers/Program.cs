@@ -8,6 +8,9 @@ namespace DollarComputers
 {
     static class Program
     {
+        // declared public static form - Application GLOBAL
+        public static SplashScreen MySplashScreen;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,11 @@ namespace DollarComputers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Initialize SplashForm and CalculatorForm
+            Program.MySplashScreen = new SplashScreen();
+
+            Application.Run(Program.MySplashScreen);
         }
     }
 }
