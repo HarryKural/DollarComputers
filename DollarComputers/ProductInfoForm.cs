@@ -12,6 +12,9 @@ namespace DollarComputers
 {
     public partial class ProductInfoForm : Form
     {
+        // Create a reference to the previous form
+        public StartForm startForm { get; set; }
+
         public ProductInfoForm()
         {
             InitializeComponent();
