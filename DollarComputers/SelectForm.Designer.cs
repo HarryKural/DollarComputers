@@ -86,8 +86,10 @@
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 26);
             this.CancelButton.TabIndex = 4;
+            this.CancelButton.Tag = "Cancel";
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
             // NextButton
             // 
@@ -96,8 +98,10 @@
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 26);
             this.NextButton.TabIndex = 5;
+            this.NextButton.Tag = "Next";
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
             // SelectForm
             // 
