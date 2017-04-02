@@ -34,7 +34,7 @@
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dollarComputersDataSet = new DollarComputers.DollarComputersDataSet();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.YourSelectionTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.productsTableAdapter = new DollarComputers.DollarComputersDataSetTableAdapters.productsTableAdapter();
@@ -67,6 +67,7 @@
             this.HardwareListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HardwareListDataGridView.Size = new System.Drawing.Size(760, 301);
             this.HardwareListDataGridView.TabIndex = 1;
+            this.HardwareListDataGridView.SelectionChanged += new System.EventHandler(this._hardwareListDataGridView_SelectionChanged);
             // 
             // productsBindingSource
             // 
@@ -88,16 +89,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Your Selection";
             // 
-            // textBox1
+            // YourSelectionTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(133, 369);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(356, 23);
-            this.textBox1.TabIndex = 3;
+            this.YourSelectionTextBox.BackColor = System.Drawing.Color.White;
+            this.YourSelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.YourSelectionTextBox.ForeColor = System.Drawing.Color.Black;
+            this.YourSelectionTextBox.Location = new System.Drawing.Point(133, 369);
+            this.YourSelectionTextBox.Name = "YourSelectionTextBox";
+            this.YourSelectionTextBox.ReadOnly = true;
+            this.YourSelectionTextBox.Size = new System.Drawing.Size(356, 23);
+            this.YourSelectionTextBox.TabIndex = 3;
+            this.YourSelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CancelButton
             // 
@@ -134,14 +136,14 @@
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.YourSelectionTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.HardwareListDataGridView);
             this.Controls.Add(this.label1);
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
-            this.Load += new System.EventHandler(this.SelectForm_Load);
+            this.Load += new System.EventHandler(this._SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
@@ -155,7 +157,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView HardwareListDataGridView;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox YourSelectionTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
         private DollarComputersDataSet dollarComputersDataSet;

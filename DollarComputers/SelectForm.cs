@@ -59,7 +59,7 @@ namespace DollarComputers
             }
         }
 
-        private void SelectForm_Load(object sender, EventArgs e)
+        private void _SelectForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             // this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
@@ -75,6 +75,16 @@ namespace DollarComputers
             {
                 MessageBox.Show("You are unable to connect to the database.", "Error: Connection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Debug.WriteLine(exception.Message);
+            }
+        }
+
+        private void _hardwareListDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (HardwareListDataGridView.SelectedRows.Count > 0)
+            {
+                YourSelectionTextBox.Text = HardwareListDataGridView.SelectedRows[0].Cells[2].Value.ToString() + " " +
+                                            HardwareListDataGridView.SelectedRows[0].Cells[3].Value.ToString() + "   Priced at: $" +
+                                            HardwareListDataGridView.SelectedRows[0].Cells[1].Value.ToString();
             }
         }
     }
