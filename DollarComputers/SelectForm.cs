@@ -70,7 +70,6 @@ namespace DollarComputers
                 var ProductsList = (from Products in ProductsDB.products
                                     select Products).ToList();
                 HardwareListDataGridView.DataSource = ProductsList;
-                
             }
             catch(Exception exception)
             {

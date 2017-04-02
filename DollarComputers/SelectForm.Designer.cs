@@ -61,8 +61,10 @@
             this.HardwareListDataGridView.AllowUserToDeleteRows = false;
             this.HardwareListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HardwareListDataGridView.Location = new System.Drawing.Point(12, 48);
+            this.HardwareListDataGridView.MultiSelect = false;
             this.HardwareListDataGridView.Name = "HardwareListDataGridView";
             this.HardwareListDataGridView.ReadOnly = true;
+            this.HardwareListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HardwareListDataGridView.Size = new System.Drawing.Size(760, 301);
             this.HardwareListDataGridView.TabIndex = 1;
             // 
