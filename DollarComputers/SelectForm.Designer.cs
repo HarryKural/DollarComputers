@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.HardwareListDataGridView = new System.Windows.Forms.DataGridView();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarComputersDataSet = new DollarComputers.DollarComputersDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.productsTableAdapter = new DollarComputers.DollarComputersDataSetTableAdapters.productsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,12 +57,24 @@
             // 
             // HardwareListDataGridView
             // 
+            this.HardwareListDataGridView.AllowUserToAddRows = false;
+            this.HardwareListDataGridView.AllowUserToDeleteRows = false;
             this.HardwareListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HardwareListDataGridView.Location = new System.Drawing.Point(12, 48);
             this.HardwareListDataGridView.Name = "HardwareListDataGridView";
             this.HardwareListDataGridView.ReadOnly = true;
             this.HardwareListDataGridView.Size = new System.Drawing.Size(760, 301);
             this.HardwareListDataGridView.TabIndex = 1;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = this.dollarComputersDataSet;
+            // 
+            // dollarComputersDataSet
+            // 
+            this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
+            this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -103,6 +121,10 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
             // SelectForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -117,7 +139,10 @@
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
+            this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +156,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
+        private DollarComputersDataSet dollarComputersDataSet;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private DollarComputersDataSetTableAdapters.productsTableAdapter productsTableAdapter;
     }
 }

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using DollarComputers.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,9 @@ namespace DollarComputers
 {
     public partial class SelectForm : Form
     {
+        // Connect to the models
+        ProductsContext ProductsDB = new ProductsContext();
+
         // Create a reference to the previous form
         public StartForm startForm { get; set; }
         public ProductInfoForm productInfoForm { get; set; }
@@ -51,6 +56,26 @@ namespace DollarComputers
                     // Hide the form
                     this.Hide();
                     break;
+            }
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+            // this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+
+            try
+            {
+                // selecting all the products from the Products DB
+                var ProductsList = (from Products in ProductsDB.products
+                                    select Products).ToList();
+                HardwareListDataGridView.DataSource = ProductsList;
+                
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show("You are unable to connect to the database.", "Error: Connection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine(exception.Message);
             }
         }
     }
