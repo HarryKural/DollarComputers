@@ -64,10 +64,8 @@ namespace DollarComputers
                     break;
 
                 case "Next":
-                    _getSelectedValue();
-
                     // Instantiate an object to the next form
-                    ProductInfoForm productInfoForm = new ProductInfoForm(this.hardware);
+                    ProductInfoForm productInfoForm = new ProductInfoForm(_getSelectedValue());
 
                     // Pass a reference to the current form to the next form
                     productInfoForm.selectForm = this;
@@ -121,13 +119,17 @@ namespace DollarComputers
                                             HardwareListDataGridView.SelectedRows[0].Cells[3].Value.ToString() + "   Priced at: $" +
                                             HardwareListDataGridView.SelectedRows[0].Cells[1].Value.ToString();
             }
+
+
         }
 
         /// <summary>
         /// This method adds the data to list (hardware) which is needed to pass to other form
         /// </summary>
-        private void _getSelectedValue()
+        private List<string> _getSelectedValue()
         {
+            List<string> hardware = new List<string>();
+
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[0].Value.ToString());
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[14].Value.ToString());
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[1].Value.ToString());
@@ -144,6 +146,8 @@ namespace DollarComputers
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[11].Value.ToString());
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[12].Value.ToString());
             hardware.Add(HardwareListDataGridView.SelectedRows[0].Cells[30].Value.ToString());
+
+            return hardware;
         }
     }
 }

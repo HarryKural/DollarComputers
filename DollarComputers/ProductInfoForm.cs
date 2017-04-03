@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,14 @@ using System.Windows.Forms;
 
 namespace DollarComputers
 {
+
+    
+
     public partial class ProductInfoForm : Form
     {
+
+        private List<string> _productDetails;
+
         // Create a reference to the previous form
         public StartForm startForm { get; set; }
         public SelectForm selectForm { get; set; }
@@ -32,24 +39,92 @@ namespace DollarComputers
         public ProductInfoForm(List<string> productDetails)
         {
             InitializeComponent();
+            
+            if (_productDetails == null)
+            {
+                // Open file and read from file
+                openToolStripMenuItem.PerformClick();
+            } 
+            else
+            {
+                _productDetails = productDetails;
+            }
 
-            //ProductIDTextBox.Text = productDetails[0];
-            //ConditionTextBox.Text = productDetails[14];
-            //CostTextBox.Text = productDetails[1];
-            //PlatformTextBox.Text = productDetails[16];
-            //OSTextBox.Text = productDetails[15];
-            //ManufacturerTextBox.Text = productDetails[2];
-            //ModelTextBox.Text = productDetails[3];
-            //MemoryTextBox.Text = productDetails[5];
-            //LCDSizeTextBox.Text = productDetails[7];
-            //HDDTextBox.Text = productDetails[17];
-            //CPUBrandTextBox.Text = productDetails[10];
-            //CPUNumberTextBox.Text = productDetails[13];
-            //GPUTypeTextBox.Text = productDetails[19];
-            //CPUTypeTextBox.Text = productDetails[11];
-            //CPUSpeedTextBox.Text = productDetails[12];
-            //WebCamTextBox.Text = productDetails[30];
+            _fillForm();
+
         }
+
+        private void _fillForm()
+        {
+            ProductIDTextBox.Text = _productDetails[0];
+            ConditionTextBox.Text = _productDetails[1];
+            CostTextBox.Text = _productDetails[2];
+            PlatformTextBox.Text = _productDetails[3];
+            OSTextBox.Text = _productDetails[4];
+            ManufacturerTextBox.Text = _productDetails[5];
+            ModelTextBox.Text = _productDetails[6];
+            MemoryTextBox.Text = _productDetails[7];
+            LCDSizeTextBox.Text = _productDetails[8];
+            HDDTextBox.Text = _productDetails[9];
+            CPUBrandTextBox.Text = _productDetails[10];
+            CPUNumberTextBox.Text = _productDetails[11];
+            GPUTypeTextBox.Text = _productDetails[12];
+            CPUTypeTextBox.Text = _productDetails[13];
+            CPUSpeedTextBox.Text = _productDetails[14];
+            WebCamTextBox.Text = _productDetails[15];
+        }
+
+        private void _readFromFile(Object sender, EventArgs e)
+        {
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    StreamReader fileReader = new StreamReader(openFileDialog.FileName);
+                    for (int i = 0; i < _productDetails.Count; i++)
+                    {
+                        _productDetails.Add(fileReader.ReadLine());
+                    }
+
+                    fileReader.Close();
+
+                    _fillForm();
+                }
+                catch (Exception ex)
+                {
+                    // catch ex
+                    
+                }
+            }
+            
+        }
+
+
+        private void _writeToFile(Object sender, EventArgs e)
+        {
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    StreamWriter fileWriter = new StreamWriter(saveFileDialog.FileName);
+                    for (int i = 0; i < _productDetails.Count; i++)
+                    {
+                        fileWriter.WriteLine(_productDetails[i]);
+                    }
+
+                    fileWriter.Close();
+                }
+                catch (Exception ex)
+                {
+                    // catch ex
+
+                }
+            }
+
+        }
+
 
         /// <summary>
         /// This event handler handles all button clicks
@@ -89,7 +164,7 @@ namespace DollarComputers
 
                 case "Next":
                     // Instantiate an object to the next form
-                    OrderForm orderForm = new OrderForm();
+                    OrderForm orderForm = new OrderForm(_productDetails);
 
                     // Pass a reference to the current form to the next form
                     orderForm.productInfoForm = this;

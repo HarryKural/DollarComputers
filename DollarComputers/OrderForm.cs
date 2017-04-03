@@ -26,7 +26,7 @@ namespace DollarComputers
     {
         public ProductInfoForm productInfoForm { get; set; }
 
-        public OrderForm()
+        public OrderForm(List<string> productDetails)
         {
             InitializeComponent();
         }
