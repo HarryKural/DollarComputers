@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DollarComputers")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Dollar Computers")]
+[assembly: AssemblyDescription("This application allows the user to buy a hardware product from the provided data and save that to a config file. Also, user can load file in the form.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DollarComputers")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("1800-100-1000")]
+[assembly: AssemblyProduct("Harshit Sharma")]
+[assembly: AssemblyCopyright("www.DollarComputers.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
