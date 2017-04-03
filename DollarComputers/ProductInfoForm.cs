@@ -33,22 +33,22 @@ namespace DollarComputers
         {
             InitializeComponent();
 
-            ProductIDTextBox.Text = productDetails[0];
-            ConditionTextBox.Text = productDetails[14];
-            CostTextBox.Text = productDetails[1];
-            PlatformTextBox.Text = productDetails[16];
-            OSTextBox.Text = productDetails[15];
-            ManufacturerTextBox.Text = productDetails[2];
-            ModelTextBox.Text = productDetails[3];
-            MemoryTextBox.Text = productDetails[5];
-            LCDSizeTextBox.Text = productDetails[7];
-            HDDTextBox.Text = productDetails[17];
-            CPUBrandTextBox.Text = productDetails[10];
-            CPUNumberTextBox.Text = productDetails[13];
-            GPUTypeTextBox.Text = productDetails[19];
-            CPUTypeTextBox.Text = productDetails[11];
-            CPUSpeedTextBox.Text = productDetails[12];
-            WebCamTextBox.Text = productDetails[30];
+            //ProductIDTextBox.Text = productDetails[0];
+            //ConditionTextBox.Text = productDetails[14];
+            //CostTextBox.Text = productDetails[1];
+            //PlatformTextBox.Text = productDetails[16];
+            //OSTextBox.Text = productDetails[15];
+            //ManufacturerTextBox.Text = productDetails[2];
+            //ModelTextBox.Text = productDetails[3];
+            //MemoryTextBox.Text = productDetails[5];
+            //LCDSizeTextBox.Text = productDetails[7];
+            //HDDTextBox.Text = productDetails[17];
+            //CPUBrandTextBox.Text = productDetails[10];
+            //CPUNumberTextBox.Text = productDetails[13];
+            //GPUTypeTextBox.Text = productDetails[19];
+            //CPUTypeTextBox.Text = productDetails[11];
+            //CPUSpeedTextBox.Text = productDetails[12];
+            //WebCamTextBox.Text = productDetails[30];
         }
 
         /// <summary>

@@ -31,7 +31,6 @@ namespace DollarComputers
             InitializeComponent();
         }
 
-
         /// <summary>
         /// This event handler handles all button clicks
         /// </summary>
@@ -69,7 +68,11 @@ namespace DollarComputers
                     break;
 
                 case "Finish":
-
+                    DialogResult finish = MessageBox.Show("Thank you for your business." + Environment.NewLine + "Your order will be processed in 7 - 10 business days.", "Thank You!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (finish == DialogResult.OK)
+                    {
+                        Application.Exit();
+                    }
                     break;
             }
         }
@@ -104,6 +107,11 @@ namespace DollarComputers
             this.CancelButton.PerformClick();
         }
 
+        /// <summary>
+        /// Shows about form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
