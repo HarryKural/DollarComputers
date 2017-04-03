@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.label1 = new System.Windows.Forms.Label();
             this.HardwareListDataGridView = new System.Windows.Forms.DataGridView();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -143,6 +144,7 @@
             this.Controls.Add(this.HardwareListDataGridView);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
