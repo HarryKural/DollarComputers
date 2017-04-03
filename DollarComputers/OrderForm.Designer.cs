@@ -79,6 +79,10 @@
             // OrderFormMenuStrip
             // 
             this.OrderFormMenuStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.OrderFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.OrderFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.OrderFormMenuStrip.Name = "OrderFormMenuStrip";
             this.OrderFormMenuStrip.Size = new System.Drawing.Size(784, 27);
@@ -143,7 +147,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -482,7 +486,6 @@
             this.Controls.Add(this.SystemComponentsGroupBox);
             this.Controls.Add(this.OrderFormMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.OrderFormMenuStrip;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
