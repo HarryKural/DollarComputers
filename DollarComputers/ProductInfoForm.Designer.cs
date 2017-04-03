@@ -84,9 +84,6 @@
             // ProductInfoFormMenuStrip
             // 
             this.ProductInfoFormMenuStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ProductInfoFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
             this.ProductInfoFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.ProductInfoFormMenuStrip.Name = "ProductInfoFormMenuStrip";
             this.ProductInfoFormMenuStrip.Size = new System.Drawing.Size(717, 27);
@@ -576,6 +573,7 @@
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.ProductInfoFormMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ProductInfoFormMenuStrip;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
