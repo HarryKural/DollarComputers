@@ -40,7 +40,7 @@ namespace DollarComputers
         {
             InitializeComponent();
             
-            if (_productDetails == null)
+            if (productDetails == null)
             {
                 // Open file and read from file
                 openToolStripMenuItem.PerformClick();
