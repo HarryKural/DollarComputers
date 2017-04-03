@@ -132,7 +132,7 @@
             // _backToolStripMenuItem
             // 
             this._backToolStripMenuItem.Name = "_backToolStripMenuItem";
-            this._backToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this._backToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this._backToolStripMenuItem.Text = "&Back";
             this._backToolStripMenuItem.Click += new System.EventHandler(this._backToolStripMenuItem_Click);
             // 
@@ -484,6 +484,7 @@
             this.Controls.Add(this.YourPriceGroupBox);
             this.Controls.Add(this.SystemComponentsGroupBox);
             this.Controls.Add(this.OrderFormMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.OrderFormMenuStrip;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

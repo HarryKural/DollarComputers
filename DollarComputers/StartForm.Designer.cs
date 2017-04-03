@@ -102,6 +102,7 @@
             this.Controls.Add(this.OpenButton);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.OrderLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Dollar Computer!";

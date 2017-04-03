@@ -37,6 +37,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SelectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductIDLabel = new System.Windows.Forms.Label();
             this.ProductIDTextBox = new System.Windows.Forms.TextBox();
             this.ConditionTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +76,6 @@
             this.SelectAnotherProductButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
-            this.SelectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfoFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -147,6 +147,13 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
             this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // SelectAnotherProductToolStripMenuItem
+            // 
+            this.SelectAnotherProductToolStripMenuItem.Name = "SelectAnotherProductToolStripMenuItem";
+            this.SelectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
+            this.SelectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.SelectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this._selectAnotherProductToolStripMenuItem_Click);
             // 
             // ProductIDLabel
             // 
@@ -550,13 +557,6 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
-            // SelectAnotherProductToolStripMenuItem
-            // 
-            this.SelectAnotherProductToolStripMenuItem.Name = "SelectAnotherProductToolStripMenuItem";
-            this.SelectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
-            this.SelectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
-            this.SelectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this._selectAnotherProductToolStripMenuItem_Click);
-            // 
             // ProductInfoForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -575,6 +575,7 @@
             this.Controls.Add(this.ProductIDTextBox);
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.ProductInfoFormMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.ProductInfoFormMenuStrip;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

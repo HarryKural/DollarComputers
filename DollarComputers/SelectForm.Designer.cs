@@ -59,6 +59,7 @@
             // 
             this.HardwareListDataGridView.AllowUserToAddRows = false;
             this.HardwareListDataGridView.AllowUserToDeleteRows = false;
+            this.HardwareListDataGridView.AllowUserToResizeRows = false;
             this.HardwareListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HardwareListDataGridView.Location = new System.Drawing.Point(12, 48);
             this.HardwareListDataGridView.MultiSelect = false;
@@ -99,6 +100,7 @@
             this.YourSelectionTextBox.ReadOnly = true;
             this.YourSelectionTextBox.Size = new System.Drawing.Size(356, 23);
             this.YourSelectionTextBox.TabIndex = 3;
+            this.YourSelectionTextBox.TabStop = false;
             this.YourSelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CancelButton
@@ -140,10 +142,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.HardwareListDataGridView);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
-            this.Load += new System.EventHandler(this._SelectForm_Load);
+            this.Load += new System.EventHandler(this._selectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
